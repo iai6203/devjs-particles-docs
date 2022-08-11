@@ -23,12 +23,13 @@ const Code = ({ node, inline, className, children, ...props }: Props) => {
 
   return !inline && match ? (
     <SyntaxHighlighter
-      children={String(children).replace(/\n$/, '')}
       style={materialLight}
       language={match[1]}
       PreTag="div"
       {...props}
-    />
+    >
+      {String(children).replace(/\n$/, '')}
+    </SyntaxHighlighter>
   ) : (
     <code className={className} {...props}>
       {children}
