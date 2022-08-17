@@ -3,7 +3,15 @@ import type { AppProps } from 'next/app'
 
 import { DefaultSeo } from 'next-seo'
 
+// hooks
+import usePageLoading from '../hooks/usePageLoading'
+
+// components
+import Loader from '../components/Loader'
+
 function MyApp({ Component, pageProps }: AppProps) {
+  const { isPageLoading } = usePageLoading()
+
   return (
     <>
       <DefaultSeo
@@ -11,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         description="devJS-Particles Official Documents"
       />
       <Component {...pageProps} />
+      {isPageLoading && <Loader />}
     </>
   )
 }
