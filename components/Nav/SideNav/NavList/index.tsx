@@ -17,6 +17,10 @@ const Index = () => {
       <NavItem href="/docs/introduction" text={t('common:Introduction')} />
       <NavItem href="/docs/example" text={t('common:Example')} />
       <hr />
+      <NavItem href="/docs/particles" text={t('common:Particles Effect')} />
+      <NavItem href="/docs/ball" text={t('common:Ball Effect')} />
+      <NavItem href="/docs/web" text={t('common:Web Effect')} />
+      <hr />
       <NavItem href="/demo" text={t('common:Demo')} />
     </ul>
   )
